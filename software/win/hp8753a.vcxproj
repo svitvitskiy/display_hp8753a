@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClInclude Include="basewin.h" />
     <ClInclude Include="canvas.h" />
+    <ClInclude Include="commthread.h" />
     <ClInclude Include="hp1349renderer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -13,7 +13,7 @@ class CanvasWindow : public BaseWindow<CanvasWindow>
     ID2D1Factory*             pFactory;
     ID2D1HwndRenderTarget*    pRenderTarget;
     std::list<unsigned char*> data;
-    HP1349Renderer            renderer;
+    HP1349Renderer            renderer;    
 
     void    CalculateLayout() { }
     HRESULT CreateGraphicsResources();

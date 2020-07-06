@@ -45,6 +45,10 @@ void HP1349Renderer::Destroy() {
 }
 
 void HP1349Renderer::Render(unsigned char* data) {
+	if (data == NULL) {
+		aligned = false;
+		return;
+	}
 	unsigned int dataLen = data[0];
 
 	if (dataLen > 204)
