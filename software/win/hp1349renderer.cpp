@@ -97,13 +97,13 @@ void HP1349Renderer::SetCondition(unsigned short command) {
 
 void HP1349Renderer::Plot(unsigned short command) {
 	int coord = command & 0x7ff;
-	int coordS1 = coord >> 1;
+	//int coordS1 = coord >> 1;
 	int xy = (command >> 12) & 0x1;
 	int pc = (command >> 11) & 0x1;
 
-	if (frameBegin == 0 && coordS1 == 0 && xy == 0 && pc == 0) {
+	if (frameBegin == 0 && coord == 0 && xy == 0 && pc == 0) {
 		frameBegin = 1;
-	} else if (frameBegin == 1 && coordS1 == 1005 && xy == 1 && pc == 0) {
+	} else if (frameBegin == 1 && coord == 2009 && xy == 1 && pc == 0) {
 		frameBegin = 2;
 	} else {
 		frameBegin = 0;
